@@ -1,10 +1,10 @@
-import { asyncHandler } from "../utils/asyncHandler";
-import { Comment } from "../models/comment.models";
-import { ApiError } from "../utils/ApiError";
-import { ApiResponse } from "../utils/ApiResponse";
+import { asyncHandler } from "../utils/asyncHandler.js";
+import { Comment } from "../models/comment.models.js";
+import { ApiError } from "../utils/ApiError.js";
+import { ApiResponse } from "../utils/ApiResponse.js";
 import mongoose, { isValidObjectId } from "mongoose";
-import { Video } from "../models/video.models";
-import { User } from "../models/user.models";
+import { Video } from "../models/video.models.js";
+import { User } from "../models/user.models.js";
 
 const getVideoComments=asyncHandler(async(req,res)=>{
   const {videoId}=req.params

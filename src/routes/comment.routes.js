@@ -1,5 +1,6 @@
 import Router from "express"
-import { verifyJWT } from "../middlewares/auth.middleware"
+import { verifyJWT } from "../middlewares/auth.middleware.js"
+import { addComment, deleteComment, getVideoComments, updateComment } from "../controllers/comment.controllers.js";
 const router=Router()
 
 router.use(verifyJWT);
